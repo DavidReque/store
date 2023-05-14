@@ -1,4 +1,4 @@
-import './globals.css'
+import '../styles/globals.css'
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google'
 
 const space = spaceGrotesk({
