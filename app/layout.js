@@ -1,7 +1,10 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk as spaceGrotesk } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = spaceGrotesk({
+  weight: ['400', '700'],
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Create Next App',
