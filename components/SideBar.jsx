@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Menu from './Menu'
 
 export default function SidebarMenu () {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,16 +36,16 @@ export default function SidebarMenu () {
 
       {isOpen && (
         <div
-          className='fixed top-0 left-0 h-full w-full bg-gray-800 bg-opacity-50 z-20 flex items-center justify-center'
+          className='bg-slate-300 fixed top-0 left-0 h-full w-full bg-opacity-50 z-20 flex'
           onClick={closeMenu}
         >
-          <div className='bg-white w-60 p-4 rounded-md'>
+          <div className='bg-white w-60 rounded-md'>
             <button
-              className='absolute top-2 right-2 bg-gray-300 p-2 rounded-md'
+              className='absolute top-2 right-2 p-2 rounded-md'
               onClick={closeMenu}
             >
               <svg
-                className='h-6 w-6 text-gray-600'
+                className='h-6 w-6 text-black'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
@@ -58,17 +59,7 @@ export default function SidebarMenu () {
               </svg>
             </button>
 
-            <ul>
-              <li>
-                <a href='#' className='block py-2'>Opción 1</a>
-              </li>
-              <li>
-                <a href='#' className='block py-2'>Opción 2</a>
-              </li>
-              <li>
-                <a href='#' className='block py-2'>Opción 3</a>
-              </li>
-            </ul>
+            <Menu />
           </div>
         </div>
       )}
