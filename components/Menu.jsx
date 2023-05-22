@@ -14,10 +14,10 @@ export default function Menu () {
   return (
     <ul>
       {data.map((products) => (
-        <div className='flex hover:bg-slate-400 h-[45px]' key={products.id}>
+        <div className='flex hover:bg-slate-100 h-[45px]' key={products.id}>
           <Tooltip label={products.name} aria-label='A tooltip'>
             <Link className='ml-3 mt-3 w-full' href={products.url}>
-              {products.name}
+              {products.name.toLocaleUpperCase()}
             </Link>
           </Tooltip>
         </div>
