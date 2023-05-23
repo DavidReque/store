@@ -1,5 +1,6 @@
 'use client'
 
+import Cart from './Cart'
 import Search from './Search'
 import SideBar from './SideBar'
 import Link from 'next/link'
@@ -13,6 +14,9 @@ export default function Header () {
       <SideBar />
       <div className='flex justify-center items-center'>
         <Search />
+      </div>
+      <div>
+        <Cart />
       </div>
     </header>
   )
