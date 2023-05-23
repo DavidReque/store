@@ -14,7 +14,7 @@ export default function SidebarMenu () {
   }
 
   return (
-    <div className='relative'>
+    <div className={`relative ${isOpen ? 'animate-fadeIn' : ''}`}>
       <button
         className='fixed top-5 left-5 z-10'
         onClick={toggleMenu}
