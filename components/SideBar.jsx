@@ -15,9 +15,11 @@ export default function SidebarMenu () {
 
   return (
     <div className={`relative ${isOpen ? 'animate-fadeIn' : ''}`}>
-      <button
-        className='fixed top-5 left-5 z-10 ease-in duration-200'
+      <motion.button
+        className='fixed top-5 left-5 z-10 ease-in duration-200 hover:underline'
         onClick={toggleMenu}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
         <svg
           className='h-6 w-6 text-black'
@@ -32,7 +34,7 @@ export default function SidebarMenu () {
             d='M4 6h16M4 12h16M4 18h16'
           />
         </svg>
-      </button>
+      </motion.button>
 
       {isOpen && (
         <motion.div
@@ -50,9 +52,11 @@ export default function SidebarMenu () {
             exit={{ x: -100, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <button
+            <motion.button
               className='absolute top-2 right-2 p-2 rounded-md'
               onClick={closeMenu}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               <svg
                 className='h-6 w-6 text-black'
@@ -67,7 +71,7 @@ export default function SidebarMenu () {
                   d='M6 18L18 6M6 6l12 12'
                 />
               </svg>
-            </button>
+            </motion.button>
 
             <Menu />
           </motion.div>
