@@ -1,5 +1,5 @@
-'use client'
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import Menu from './Menu'
 
 export default function SidebarMenu () {
@@ -16,7 +16,7 @@ export default function SidebarMenu () {
   return (
     <div className={`relative ${isOpen ? 'animate-fadeIn' : ''}`}>
       <button
-        className='fixed top-5 left-5 z-10'
+        className='fixed top-5 left-5 z-10 ease-in duration-200'
         onClick={toggleMenu}
       >
         <svg
@@ -35,11 +35,21 @@ export default function SidebarMenu () {
       </button>
 
       {isOpen && (
-        <div
+        <motion.div
           className='bg-slate-300 fixed top-0 left-0 h-full w-full bg-opacity-50 z-20 flex'
           onClick={closeMenu}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <div className='bg-white w-60 rounded-md'>
+          <motion.div
+            className='bg-white w-60 rounded-md'
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -100, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <button
               className='absolute top-2 right-2 p-2 rounded-md'
               onClick={closeMenu}
@@ -60,8 +70,8 @@ export default function SidebarMenu () {
             </button>
 
             <Menu />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   )
