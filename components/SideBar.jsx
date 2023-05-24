@@ -14,9 +14,9 @@ export default function SidebarMenu () {
   }
 
   return (
-    <div className={`relative ${isOpen ? 'animate-fadeIn' : ''}`}>
+    <div>
       <motion.button
-        className='fixed top-5 left-5 z-10 ease-in duration-200 hover:underline'
+        className='fixed top-5 left-5 z-10'
         onClick={toggleMenu}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
