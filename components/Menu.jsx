@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { Tooltip } from '@chakra-ui/react'
 
@@ -10,7 +10,19 @@ const data = [
   { id: 4, name: 'Impresoras', url: '/impresoras' }
 ]
 
+const subMenu = [
+  { id: 1, name: 'Mantenimiento', url: './computadoras/mantenimiento' },
+  { id: 2, name: 'Gamer', url: '/computadoras/gamer' },
+  { id: 3, name: 'accesorios', url: '/accesorios/computadoras' }
+]
+
 export default function Menu () {
+  const [subMenuOpen, setSubMenuOpen] = useState(false)
+
+  const showSubMenu = () => {
+    setSubMenuOpen(!subMenuOpen)
+  }
+
   return (
     <ul>
       {data.map((products) => (
@@ -22,6 +34,17 @@ export default function Menu () {
           </Tooltip>
         </div>
       ))}
+      {showSubMenu && (
+        <ul>
+          {subMenu.map((moreProducts) => (
+            <li key={moreProducts.id}>
+              <Link href={moreProducts.url}>
+                {moreProducts.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </ul>
   )
 }
