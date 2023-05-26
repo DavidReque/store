@@ -35,57 +35,44 @@ const data = [
 ]
 
 export default function Menu () {
-  const [activeProduct, setActiveProduct] = useState(null)
+  const [activeMenuItem, setActiveMenuItem] = useState(null)
 
-  const handleMouseEnter = (product) => {
-    setActiveProduct(product)
+  const handleMouseEnter = (itemId) => {
+    setActiveMenuItem(itemId)
   }
 
   const handleMouseLeave = () => {
-    setActiveProduct(null)
+    setActiveMenuItem(null)
   }
 
   return (
-    <ul>
-      {data.map((product) => (
+    <ul className='flex flex-col space-y-2'>
+      {data.map((item, index) => (
         <li
-          key={product.id}
-          className='flex hover:bg-slate-100 h-[45px]'
-          onMouseEnter={() => handleMouseEnter(product)}
+          key={item.id}
+          className={`relative group ${index !== 0 ? 'mt-2' : ''}`}
+          onMouseEnter={() => handleMouseEnter(item.id)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link className='ml-3 mt-3 w-full' href={product.url}>
-            {product.name.toLocaleUpperCase()}
+          <Link href={item.url} className='font-bold text-lg hover:text-blue-500'>
+            {item.name.toLocaleUpperCase()}
           </Link>
-          <button>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={1.5}
-              stroke='currentColor'
-              className='w-6 h-6'
-            >
-              {activeProduct && activeProduct.id === product.id
-                ? (
-                  <path strokeLinecap='round' strokeLinejoin='round' d='M5 15l7-7 7 7' />
-                  )
-                : (
-                  <path strokeLinecap='round' strokeLinejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5' />
-                  )}
-            </svg>
-          </button>
+          {item.subCategories && activeMenuItem === item.id && (
+            <div className='absolute left-full top-0 mt-[-2px] bg-white p-2 rounded-md shadow-md'>
+              {item.subCategories.map((subItem) => (
+                <div key={subItem.id}>
+                  <Link
+                    href={subItem.url}
+                    className='block py-1 px-2 hover:bg-blue-500 hover:text-white rounded-md'
+                  >
+                    {subItem.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </li>
       ))}
-      {activeProduct && activeProduct.subCategories && (
-        <ul>
-          {activeProduct.subCategories.map((category) => (
-            <li key={category.id}>
-              <Link href={category.url}>{category.name}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
     </ul>
   )
 }
