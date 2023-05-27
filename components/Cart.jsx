@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function Cart () {
   return (
-    <div>
+    <div className='fixed top-5 right-5 z-10'>
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
