@@ -70,7 +70,7 @@ export default function Menu () {
                 </Popover.Button>
                 {item.subCategories && (
                   <Popover.Panel
-                    className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-md ${
+                    className={`absolute top-0 left-full mt-0 ml-2 w-48 bg-white rounded-md shadow-md ${
                       activeMenuItem === item.id ? 'block' : 'hidden'
                     }`}
                   >
