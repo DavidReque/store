@@ -38,7 +38,7 @@ export default function SidebarMenu () {
 
       {isOpen && (
         <motion.div
-          className='bg-slate-300 fixed top-0 left-0 h-full w-full bg-opacity-50 z-20 flex'
+          className='bg-slate-300 fixed top-0 left-0 h-full z-20 flex'
           onClick={closeMenu}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -46,7 +46,7 @@ export default function SidebarMenu () {
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className='bg-white w-60 rounded-md'
+            className='bg-white w-52 rounded-md'
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
