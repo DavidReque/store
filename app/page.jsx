@@ -2,7 +2,7 @@
 
 export default function Home () {
   return (
-    <div>
+    <div className='h-[2000px]'>
       <main>
         Home
       </main>

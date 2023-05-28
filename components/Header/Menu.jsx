@@ -55,7 +55,7 @@ export default function Menu () {
                   }`}
                   onClick={() => toggleSubMenu(item.id)}
                 >
-                  <Link className='mt-2' href={item.url}>{item.name}</Link>
+                  <Link className='mt-2' href={item.url}>{item.name.toLocaleUpperCase()}</Link>
                   {item.id !== 1 && ( // Verificar si no es la opción 'Inicio'
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
