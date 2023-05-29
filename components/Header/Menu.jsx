@@ -43,7 +43,7 @@ export default function Menu () {
   }
 
   return (
-    <ul className='bg-white flex flex-col space-y-2 gap-1'>
+    <ul className='flex flex-col space-y-2 gap-1'>
       {data.map((item, index) => (
         <li key={item.id} className={`relative group ${index !== 0 ? 'mt-2' : ''}`}>
           <Popover>

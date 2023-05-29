@@ -27,7 +27,7 @@ export default function Header () {
 
   return (
     <header
-      className={`h-[60px] flex justify-center items-center gap-3 z-20 sticky top-0 transition-transform duration-300 ${
+      className={`bg-white h-[60px] flex justify-center items-center gap-3 z-20 sticky top-0 transition-transform duration-300 ${
         show ? 'translate-y-0' : '-translate-y-full'
       }`}
     >

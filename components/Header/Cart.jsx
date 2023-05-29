@@ -5,6 +5,7 @@ export default function Cart () {
   return (
     <div className='fixed top-5 right-5 z-10'>
       <motion.button
+        className='hover:text-blue-500 transition-colors duration-200 ease-in-out'
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

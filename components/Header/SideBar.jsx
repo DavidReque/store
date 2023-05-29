@@ -38,7 +38,7 @@ export default function SidebarMenu () {
 
       {isOpen && (
         <motion.div
-          className='bg-slate-300 fixed top-0 left-0 h-full z-20 flex'
+          className='fixed top-0 left-0 h-full z-20 flex'
           onClick={closeMenu}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -59,7 +59,7 @@ export default function SidebarMenu () {
               whileTap={{ scale: 0.9 }}
             >
               <svg
-                className='h-6 w-6 text-black cursor-pointer'
+                className='h-6 w-6'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
