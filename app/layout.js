@@ -2,7 +2,7 @@
 
 import '../styles/globals.css'
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google'
-import Footer from '@/components/Footer'
+import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import { ChakraBaseProvider } from '@chakra-ui/react'
 
