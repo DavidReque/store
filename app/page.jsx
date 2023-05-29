@@ -2,8 +2,8 @@
 
 export default function Home () {
   return (
-    <div className='h-[2000px]'>
-      <main>
+    <div className='bg-black h-[2000px]'>
+      <main className='text-white'>
         Home
       </main>
     </div>

@@ -38,7 +38,7 @@ export default function SidebarMenu () {
 
       {isOpen && (
         <motion.div
-          className='fixed top-0 left-0 h-full z-20 flex'
+          className='fixed top-0 h-[250px] left-0 z-20 flex'
           onClick={closeMenu}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
