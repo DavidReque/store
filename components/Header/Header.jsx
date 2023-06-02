@@ -7,6 +7,11 @@ import Link from 'next/link'
 export default function Header () {
   const [show, setShow] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [showInput, setShowInput] = useState(false)
+
+  const toggleInput = () => {
+    setShowInput(!showInput)
+  }
 
   function controlNavbar () {
     const currentScrollY = window.scrollY
@@ -31,18 +36,20 @@ export default function Header () {
         show ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div>
-        <SideBar />
-      </div>
-      <div>
-        <Link href='/'>Logo</Link>
-      </div>
-      <div className='flex justify-center items-center'>
-        <Search />
-      </div>
-      <div>
-        <Cart />
-      </div>
+      {showInput
+        ? (
+          <Search toggleInput={toggleInput} showInput={showInput} />
+          )
+        : (
+          <div className='flex items-center'>
+            <SideBar />
+            <Link href='/'>Logo</Link>
+            <div className='flex justify-center items-center'>
+              <Search toggleInput={toggleInput} showInput={showInput} />
+            </div>
+            <Cart />
+          </div>
+          )}
     </header>
   )
 }

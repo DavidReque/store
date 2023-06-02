@@ -1,12 +1,4 @@
-import React, { useState } from 'react'
-
-export default function Search () {
-  const [showInput, setShowInput] = useState(false)
-
-  const toggleInput = () => {
-    setShowInput(!showInput)
-  }
-
+export default function Search ({ toggleInput, showInput }) {
   return (
     <div>
       <div className='lg:hidden'>
@@ -36,7 +28,7 @@ export default function Search () {
           : (
             <div className='relative'>
               <input
-                className='placeholder-italic placeholder-slate-400 block bg-white w-[225px] border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm'
+                className='placeholder-italic placeholder-slate-400 block bg-white w-[350px] border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm'
                 placeholder='Buscar producto...'
                 type='text'
                 name='search'
@@ -63,13 +55,36 @@ export default function Search () {
             </div>
             )}
       </div>
-      <div className='hidden lg:block'>
+      <div className='ml-3 hidden lg:block'>
         <input
-          className='placeholder-italic placeholder-slate-400 block bg-white w-[225px] border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm'
+          className='placeholder-italic placeholder-slate-400 block bg-white w-[400px] border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm'
           placeholder='Buscar producto...'
           type='text'
           name='search'
         />
+        {
+          showInput && (
+            <button
+              className='absolute top-0 right-0 flex items-center justify-center p-2'
+              onClick={toggleInput}
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='w-6 h-6'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M6 18L18 6M6 6l12 12'
+                />
+              </svg>
+            </button>
+          )
+        }
       </div>
     </div>
   )
