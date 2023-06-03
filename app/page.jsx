@@ -1,11 +1,11 @@
 'use client'
 
+import HeroBanner from '@/components/HeroBanner'
+
 export default function Home () {
   return (
-    <div className='bg-black h-[2000px]'>
-      <main className='text-white'>
-        Home
-      </main>
-    </div>
+    <main>
+      <HeroBanner />
+    </main>
   )
 }
