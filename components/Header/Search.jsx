@@ -1,12 +1,16 @@
+import { motion } from 'framer-motion'
+
 export default function Search ({ toggleInput, showInput }) {
   return (
     <div>
       <div className='lg:hidden'>
         {!showInput
           ? (
-            <button
-              className='flex items-center justify-center p-2'
+            <motion.button
+              className='fixed top-5 right-16 z-10 hover:text-blue-500 transition-colors duration-200 ease-in-out'
               onClick={toggleInput}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +27,7 @@ export default function Search ({ toggleInput, showInput }) {
                 />
               </svg>
               <span className='sr-only'>Buscar</span>
-            </button>
+            </motion.button>
             )
           : (
             <div className='relative'>
