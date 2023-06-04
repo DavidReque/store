@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 export default function HeroBanner () {
   return (
-    <div className='relative text-white text-[20px] w-full max-w-[1360px mx-auto'>
+    <div className='relative text-white text-[20px] w-full max-w-[1360px mx-auto h-full'>
       <Carousel
         autoPlay
         infiniteLoop
@@ -39,15 +39,12 @@ export default function HeroBanner () {
       >
         <div>
           <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F01%2FiPhone-14-pill.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=0b3dff8d1ecfc2658ff86028a588885603dacf792185bffbadb144ff61e808a3&ipo=images' />
-          <div className=' px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90 rounded-xl'>Shop Now</div>
         </div>
         <div>
           <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F01%2FiPhone-14-pill.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=0b3dff8d1ecfc2658ff86028a588885603dacf792185bffbadb144ff61e808a3&ipo=images' />
-          <div className=' px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90 rounded-xl'>Shop Now</div>
         </div>
         <div>
           <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F01%2FiPhone-14-pill.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=0b3dff8d1ecfc2658ff86028a588885603dacf792185bffbadb144ff61e808a3&ipo=images' />
-          <div className=' px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90 rounded-xl'>Shop Now</div>
         </div>
       </Carousel>
     </div>
