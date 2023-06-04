@@ -1,6 +1,6 @@
 'use client'
 
-import HeroBanner from '@/components/HeroBanner'
+import HeroBanner from '@/components/HeroBanner/HeroBanner'
 
 export default function Home () {
   return (
