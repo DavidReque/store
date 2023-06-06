@@ -1,12 +1,12 @@
-import img1 from '@/public/products/laptop.jpg'
-import img2 from '@/public/products/laptop2.jpg'
-import img3 from '@/public/products/laptop3.jpg'
-import img4 from '@/public/products/celular.jpg'
-import img5 from '@/public/products/celular2.jpg'
-import img6 from '@/public/products/celular3.png'
-import img7 from '@/public/products/impresora.png'
-import img8 from '@/public/products/impresora2.jpg'
-import img9 from '@/public/products/impresora3.jpg'
+import img1 from '../../public/products/laptop.jpg'
+import img2 from '../../public/products/laptop2.jpg'
+import img3 from '../../public/products/laptop3.jpg'
+import img4 from '../../public/products/celular.jpg'
+import img5 from '../../public/products/celular2.jpg'
+import img6 from '../../public/products/celular3.png'
+import img7 from '../../public/products/impresora.png'
+import img8 from '../../public/products/impresora2.jpg'
+import img9 from '../../public/products/impresora3.jpg'
 
 export const productList = [
   {
