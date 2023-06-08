@@ -68,7 +68,7 @@ export const productList = [
   {
     id: 9,
     name: 'Producto 9',
-    price: 29.99,
+    price: 14.99,
     image: img9,
     description: 'Descripción del producto 9'
   }
