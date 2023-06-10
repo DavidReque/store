@@ -6,7 +6,7 @@ export default function ProductsList () {
   return (
     <div className='mr-7 ml-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
       {productList.map((product) => (
-        <Link href={`/celulares/${product.id}`} key={product.id}>
+        <Link href={`/${product.id}`} key={product.id}>
           <div className='bg-white shadow-md rounded-md p-4'>
             <img
               src='https://diunsa.vtexassets.com/arquivos/ids/228329-500-auto?v=1772581964&width=500&height=auto&aspect=true'
