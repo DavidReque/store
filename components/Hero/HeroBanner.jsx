@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 export default function HeroBanner () {
   return (
-    <div className='relative text-white text-[20px] w-full max-w-[1360px mx-auto h-full'>
+    <div className='relative text-white text-[20px] w-full max-w-[1360px] mx-auto h-full mb-8 mt-1'>
       <Carousel
         autoPlay
         infiniteLoop

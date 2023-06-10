@@ -4,7 +4,7 @@ import Link from 'next/dist/client/link'
 
 export default function ProductsList () {
   return (
-    <div className='mr-7 ml-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+    <div className='mr-16 mb-16 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
       {productList.map((product) => (
         <Link href={`/${product.id}`} key={product.id}>
           <div className='bg-white shadow-md rounded-md p-4'>
