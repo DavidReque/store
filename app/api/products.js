@@ -49,7 +49,7 @@ export const productList = [
     name: 'Producto 6',
     price: 29.99,
     image: img6,
-    description: 'Descripción del producto 6'
+    description: 'con procesador Intel Core i5 4590 es un equipo de sobremesa de alta calidad y rendimiento para uso empresarial y personal. Cuenta con un procesador potente y una memoria RAM de 4 GB para ofrecer una experiencia de usuario fluida y sin interrupciones.'
   },
   {
     id: 7,
