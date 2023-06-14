@@ -1,18 +1,7 @@
-import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Menu from './Menu'
 
-export default function SidebarMenu () {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const closeMenu = () => {
-    setIsOpen(false)
-  }
-
+export default function SidebarMenu ({ closeMenu, toggleMenu, isOpen }) {
   return (
     <div>
       <motion.button
@@ -54,7 +43,6 @@ export default function SidebarMenu () {
           >
             <motion.button
               className='absolute top-2 right-2 p-2 rounded-md'
-              onClick={closeMenu}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

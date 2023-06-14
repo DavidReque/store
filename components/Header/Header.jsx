@@ -9,6 +9,12 @@ export default function Header () {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [showInput, setShowInput] = useState(false)
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
   const toggleInput = () => {
     setShowInput(!showInput)
   }
@@ -30,6 +36,10 @@ export default function Header () {
     }
   }, [lastScrollY])
 
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
   return (
     <header
       className={`bg-white h-[60px] flex justify-center items-center gap-3 z-20 sticky top-0 transition-transform duration-300 ${
@@ -42,7 +52,7 @@ export default function Header () {
           )
         : (
           <div className='flex items-center'>
-            <SideBar />
+            <SideBar closeMenu={closeMenu} toggleMenu={toggleMenu} isOpen={isOpen} />
             <Link href='/'>Logo</Link>
             <div className='flex justify-center items-center'>
               <Search toggleInput={toggleInput} showInput={showInput} />
