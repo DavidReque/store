@@ -7,7 +7,11 @@ export default function Products ({ params }) {
   const productos = productList.find((product) => product.id === productId)
 
   if (!productos) {
-    return <div>No se encontró el producto</div>
+    return (
+      <div className='min-h-screen max-h-screen flex justify-center items-center'>
+        <h1 className='items-center text-center text-5xl'>No se encontró el producto 😞</h1>
+      </div>
+    )
   }
 
   return (
