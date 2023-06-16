@@ -16,7 +16,7 @@ export default function Products ({ params }) {
 
   return (
     <div className='container mx-auto mt-10'>
-      <h1 className='text-2xl font-semibold mb-6'>Detalles del celular</h1>
+      <h1 className='text-2xl font-semibold mb-6 text-center'>Detalles del celular</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-6'>
         <img
           className='w-80 h-auto object-contain hover:opacity-75'
@@ -33,7 +33,7 @@ export default function Products ({ params }) {
         </div>
       </div>
       <div>
-        <h2 className='bg-blue-300 rounded-3xl p-2 text-center mt-2 mb-8'>
+        <h2 className='bg-blue-300 rounded-3xl p-2 text-center mt-2 mb-8 mx-16'>
           PRODUCTOS RELACIONADOS
         </h2>
       </div>
