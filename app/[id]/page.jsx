@@ -37,7 +37,7 @@ export default function Products ({ params }) {
           PRODUCTOS RELACIONADOS
         </h2>
       </div>
-      <Carousel />
+      <Carousel productId={productId} />
     </div>
   )
 }
