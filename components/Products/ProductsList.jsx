@@ -13,7 +13,7 @@ export default function ProductsList () {
       <div className='mr-16 mb-16 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
         {productList.map((product) => (
           <Link href={`/${product.id}`} key={product.id}>
-            <div className='bg-white shadow-md rounded-md p-4'>
+            <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
               <img
                 src='https://diunsa.vtexassets.com/arquivos/ids/228329-500-auto?v=1772581964&width=500&height=auto&aspect=true'
                 alt={product.name}
