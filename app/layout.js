@@ -4,7 +4,7 @@ import '../styles/globals.css'
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
-import { ChakraBaseProvider } from '@chakra-ui/react'
+import { CartProvider } from './CartContext'
 
 const space = spaceGrotesk({
   weight: ['400', '700'],
@@ -20,11 +20,11 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
       <body className={space.className}>
-        <ChakraBaseProvider>
+        <CartProvider>
           <Header />
           {children}
           <Footer />
-        </ChakraBaseProvider>
+        </CartProvider>
       </body>
     </html>
   )

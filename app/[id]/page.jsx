@@ -1,10 +1,18 @@
-import React from 'react'
+'use client'
+
+import React, { useContext } from 'react'
 import { productList } from '@/app/api/products'
 import Carousel from './products'
+import { CartContext } from '../CartContext'
 
 export default function Products ({ params }) {
   const productId = parseInt(params.id)
   const productos = productList.find((product) => product.id === productId)
+  const { dispatch } = useContext(CartContext)
+
+  const addToCart = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: productos })
+  }
 
   if (!productos) {
     return (
@@ -27,7 +35,10 @@ export default function Products ({ params }) {
           <h3 className='text-xl font-bold mb-2'>{productos.name}</h3>
           <p className='text-gray-600 mb-2 text-justify'>{productos.description}</p>
           <p className='text-blue-500 font-semibold'>{productos.price}</p>
-          <button className='bg-blue-500 p-4 rounded-xl m-5'>
+          <button
+            className='bg-blue-500 p-4 rounded-xl m-5'
+            onClick={addToCart}
+          >
             Agregar al carrito
           </button>
         </div>
