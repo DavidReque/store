@@ -4,6 +4,8 @@ import React, { useContext } from 'react'
 import { productList } from '@/app/api/products'
 import Carousel from './products'
 import { CartContext } from '../context/CartContext'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Products ({ params }) {
   const productId = parseInt(params.id)
@@ -13,6 +15,15 @@ export default function Products ({ params }) {
 
   const handleAddToCart = () => {
     addToCart(productos)
+    toast.success('Producto agregado al carrito', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 3000, // Duración de la notificación en milisegundos
+      hideProgressBar: false, // Ocultar la barra de progreso
+      closeOnClick: true, // Cerrar la notificación al hacer clic
+      pauseOnHover: true, // Pausar la notificación al pasar el mouse
+      draggable: false, // No permitir arrastrar la notificación
+      progress: undefined // Personalizar el componente de progreso
+    })
   }
 
   if (!productos) {
@@ -25,6 +36,7 @@ export default function Products ({ params }) {
 
   return (
     <div className='container mx-auto mt-10'>
+      <ToastContainer />
       <h1 className='text-2xl font-semibold mb-6 text-center'>Detalles del celular</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-6'>
         <img
@@ -37,7 +49,7 @@ export default function Products ({ params }) {
           <p className='text-gray-600 mb-2 text-justify'>{productos.description}</p>
           <p className='text-blue-500 font-semibold'>{productos.price}</p>
           <button
-            className='bg-blue-500 p-4 rounded-xl m-5'
+            className='bg-blue-500 p-4 rounded-xl m-5 hover:opacity-80'
             onClick={handleAddToCart}
           >
             Agregar al carrito
