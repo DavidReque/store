@@ -3,15 +3,16 @@
 import React, { useContext } from 'react'
 import { productList } from '@/app/api/products'
 import Carousel from './products'
-import { CartContext } from '../CartContext'
+import { CartContext } from '../context/CartContext'
 
 export default function Products ({ params }) {
   const productId = parseInt(params.id)
   const productos = productList.find((product) => product.id === productId)
-  const { dispatch } = useContext(CartContext)
 
-  const addToCart = () => {
-    dispatch({ type: 'ADD_TO_CART', payload: productos })
+  const { addToCart } = useContext(CartContext)
+
+  const handleAddToCart = () => {
+    addToCart(productos)
   }
 
   if (!productos) {
@@ -37,7 +38,7 @@ export default function Products ({ params }) {
           <p className='text-blue-500 font-semibold'>{productos.price}</p>
           <button
             className='bg-blue-500 p-4 rounded-xl m-5'
-            onClick={addToCart}
+            onClick={handleAddToCart}
           >
             Agregar al carrito
           </button>

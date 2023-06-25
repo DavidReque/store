@@ -4,7 +4,7 @@ import '../styles/globals.css'
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
-import { CartProvider } from './CartContext'
+import { CartProvider } from './context/CartContext'
 
 const space = spaceGrotesk({
   weight: ['400', '700'],
