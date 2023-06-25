@@ -8,7 +8,9 @@ export default function Carrito () {
 
   return (
     <div>
-      <h1>Carrito</h1>
+      {cartItems.length <= 0 && (
+        <h1>Tu carrito esta vacio</h1>
+      )}
       <ul>
         {cartItems.map((item) => (
           <div key={item.id}>
