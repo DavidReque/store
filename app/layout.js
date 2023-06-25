@@ -1,5 +1,3 @@
-'use client'
-
 import '../styles/globals.css'
 import { Space_Grotesk as spaceGrotesk } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
