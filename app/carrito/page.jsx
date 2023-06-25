@@ -7,7 +7,7 @@ export default function Carrito () {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext)
 
   return (
-    <div className='p-4'>
+    <div className='p-4 h-[575px]'>
       {cartItems.length <= 0
         ? (
           <h1 className='text-center text-xl'>Tu carrito está vacío</h1>
