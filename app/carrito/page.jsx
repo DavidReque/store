@@ -14,10 +14,12 @@ export default function Carrito () {
           <div key={item.id}>
             <li>{item.name}</li>
             <button onClick={() => removeFromCart(item.id)}>Quitar producto</button>
-            <button onClick={clearCart}>Limpiar carrito</button>
           </div>
         ))}
       </ul>
+      {cartItems.length > 0 && (
+        <button onClick={clearCart}>Limpiar carrito</button>
+      )}
     </div>
   )
 }

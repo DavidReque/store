@@ -23,6 +23,7 @@ export default function Products ({ params }) {
       pauseOnHover: true, // Pausar la notificación al pasar el mouse
       draggable: false, // No permitir arrastrar la notificación
       progress: undefined // Personalizar el componente de progreso
+
     })
   }
 
