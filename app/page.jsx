@@ -1,13 +1,9 @@
-import Category from '@/components/Hero/Category'
-import HeroBanner from '@/components/Hero/HeroBanner'
-import ProductsList from '@/components/Products/ProductsList'
+import Main from './Main'
 
 export default function Home () {
   return (
     <main>
-      <HeroBanner />
-      <Category />
-      <ProductsList />
+      <Main />
     </main>
   )
 }
