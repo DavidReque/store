@@ -5,40 +5,44 @@ import { motion } from 'framer-motion'
 import { productList } from '@/app/api/products'
 import { useState } from 'react'
 
-const ProductSuggestion = () => {
-  (
-    <div>
-      {productList.map((pro) => (
-        <div key={pro.id}>
-          <Link href={`/${pro.id}`}>
-            <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
-              <h3 className='text-lg font-bold mb-2'>{pro.name}</h3>
-              <p className='text-gray-600 mb-2'>{pro.description}</p>
-              <p className='text-blue-500 font-semibold'>{pro.price}</p>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </div>
-  )
-}
-
 export default function Search ({ toggleInput, showInput }) {
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredProducts, setFilteredProducts] = useState([])
   const [suggestedProducts, setSuggestedProducts] = useState([])
 
+  const ProductSuggestion = () => {
+    return (
+      <div>
+        {productList.map((pro) => (
+          <div key={pro.id}>
+            <Link href={`/${pro.id}`}>
+              <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
+                <h3 className='text-lg font-bold mb-2'>{pro.name}</h3>
+                <p className='text-gray-600 mb-2'>{pro.description}</p>
+                <p className='text-blue-500 font-semibold'>{pro.price}</p>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   const handleSearchTermChange = (e) => {
     const term = e.target.value
-    searchTerm(term)
+    setSearchTerm(term)
 
     const filtered = productList.filter(
-      (pro) => pro.name.toLocaleLowerCase().includes(term.toLocaleLowerCase()) && !filtered.some((filteredProducts) => filteredProducts.id === pro.id)
+      (pro) =>
+        pro.name.toLowerCase().includes(term.toLowerCase()) &&
+        !filteredProducts.some((filteredProduct) => filteredProduct.id === pro.id)
     )
     setFilteredProducts(filtered)
 
     const suggestions = productList.filter(
-      (pro) => pro.name.toLocaleLowerCase().includes(term.toLocaleLowerCase()) && !filtered.some((filteredProducts) => filteredProducts.id === pro.id)
+      (pro) =>
+        pro.name.toLowerCase().includes(term.toLowerCase()) &&
+        !filteredProducts.some((filteredProduct) => filteredProduct.id === pro.id)
     )
     setSuggestedProducts(suggestions)
   }
