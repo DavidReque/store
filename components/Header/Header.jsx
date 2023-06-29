@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Cart from './Cart'
-import Search from './Search'
+import Search from './Search/Search'
 import SideBar from './SideBar'
 import Link from 'next/link'
 
