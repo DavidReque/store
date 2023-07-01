@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { productList } from '@/app/api/products'
 import Carousel from './products'
 import { CartContext } from '../context/CartContext'
@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css'
 export default function Products ({ params }) {
   const productId = parseInt(params.id)
   const productos = productList.find((product) => product.id === productId)
+
+  const [originalTitle, setOriginalTitle] = useState(document.title)
 
   const { addToCart } = useContext(CartContext)
 
@@ -31,7 +33,10 @@ export default function Products ({ params }) {
     if (productos) {
       document.title = productos.name
     }
-  }, [productos])
+    return () => {
+      document.title = originalTitle
+    }
+  }, [productos, originalTitle])
 
   if (!productos) {
     return (
