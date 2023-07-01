@@ -66,6 +66,21 @@ export default function Search ({ toggleInput, showInput }) {
                 value={searchTerm}
                 onChange={handleSearchTermChange}
               />
+              {suggestedProducts.length > 0 && (
+                <div className='absolute bg-white mt-1 p-4 shadow-md rounded-md w-[400px]'>
+                  {suggestedProducts.map((product) => (
+                    <div key={product.id}>
+                      <Link href={`/${product.id}`}>
+                        <div className=' bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
+                          <h3 className='text-lg font-bold mb-2'>{product.name}</h3>
+                          <p className='text-gray-600 mb-2'>{product.description}</p>
+                          <p className='text-blue-500 font-semibold'>{product.price}</p>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
               <button
                 className='absolute top-0 right-0 flex items-center justify-center p-2'
                 onClick={toggleInput}
@@ -104,6 +119,21 @@ export default function Search ({ toggleInput, showInput }) {
                     <p className='text-blue-500 font-semibold'>{product.price}</p>
                   </div>
                 </Link>
+                <button
+                  className='absolute top-0 right-0 flex items-center justify-center p-2'
+                  onClick={toggleInput}
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='w-6 h-6'
+                  >
+                    <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
+                  </svg>
+                </button>
               </div>
             ))}
           </div>
