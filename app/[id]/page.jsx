@@ -47,7 +47,7 @@ export default function Products ({ params }) {
         />
         <div className='text-center'>
           <h3 className='text-xl font-bold mb-2'>{productos.name}</h3>
-          <p className='text-gray-600 mb-2 text-justify'>{productos.description}</p>
+          <p className='text-gray-600 mb-2 text-justify mx-10'>{productos.description}</p>
           <p className='text-blue-500 font-semibold'>{productos.price}</p>
           <button
             className='bg-blue-500 p-4 rounded-xl m-5 hover:opacity-80'

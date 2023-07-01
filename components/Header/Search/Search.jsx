@@ -10,24 +10,6 @@ export default function Search ({ toggleInput, showInput }) {
   const [filteredProducts, setFilteredProducts] = useState([])
   const [suggestedProducts, setSuggestedProducts] = useState([])
 
-  const ProductSuggestion = () => {
-    return (
-      <div>
-        {productList.map((pro) => (
-          <div key={pro.id}>
-            <Link href={`/${pro.id}`}>
-              <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
-                <h3 className='text-lg font-bold mb-2'>{pro.name}</h3>
-                <p className='text-gray-600 mb-2'>{pro.description}</p>
-                <p className='text-blue-500 font-semibold'>{pro.price}</p>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-    )
-  }
-
   const handleSearchTermChange = (e) => {
     const term = e.target.value
     setSearchTerm(term)
@@ -39,10 +21,9 @@ export default function Search ({ toggleInput, showInput }) {
     )
     setFilteredProducts(filtered)
 
-    const suggestions = productList.filter(
+    const suggestions = filtered.filter(
       (pro) =>
-        pro.name.toLowerCase().includes(term.toLowerCase()) &&
-        !filteredProducts.some((filteredProduct) => filteredProduct.id === pro.id)
+        !suggestedProducts.some((suggestedProduct) => suggestedProduct.id === pro.id)
     )
     setSuggestedProducts(suggestions)
   }
@@ -115,7 +96,15 @@ export default function Search ({ toggleInput, showInput }) {
         {suggestedProducts.length > 0 && (
           <div className='absolute bg-white mt-1 p-4 shadow-md rounded-md w-[400px]'>
             {suggestedProducts.map((product) => (
-              <ProductSuggestion key={product.id} product={product} />
+              <div key={product.id}>
+                <Link href={`/${product.id}`}>
+                  <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
+                    <h3 className='text-lg font-bold mb-2'>{product.name}</h3>
+                    <p className='text-gray-600 mb-2'>{product.description}</p>
+                    <p className='text-blue-500 font-semibold'>{product.price}</p>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         )}
