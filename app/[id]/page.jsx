@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { productList } from '@/app/api/products'
 import Carousel from './products'
 import { CartContext } from '../context/CartContext'
@@ -26,6 +26,12 @@ export default function Products ({ params }) {
 
     })
   }
+
+  useEffect(() => {
+    if (productos) {
+      document.title = productos.name
+    }
+  }, [productos])
 
   if (!productos) {
     return (
