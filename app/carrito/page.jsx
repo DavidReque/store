@@ -1,10 +1,18 @@
 'use client'
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { CartContext } from '../context/CartContext'
 
 export default function Carrito () {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext)
+  const [quantities, setQuantities] = useState({})
+
+  const handleQuantityChange = (productId, quantity) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [productId]: quantity
+    }))
+  }
 
   return (
     <div className='p-4 h-[575px]'>
@@ -21,6 +29,29 @@ export default function Carrito () {
                   className='flex items-center justify-between bg-white p-4 rounded-lg shadow-md'
                 >
                   <li className='text-lg'>{item.name}</li>
+                  <div className='flex items-center'>
+                    <button
+                      onClick={() => handleQuantityChange(item.id, (quantities[item.id] || 1) - 1)}
+                      className='border rounded-md px-2 py-1'
+                    >
+                      -
+                    </button>
+                    <input
+                      type='number'
+                      value={quantities[item.id] || 1} // Valor predeterminado de cantidad: 1
+                      onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
+                      className='border rounded-md p-1 mx-2 w-24 text-center'
+                    />
+                    <button
+                      onClick={() => handleQuantityChange(item.id, (quantities[item.id] || 1) + 1)}
+                      className='border rounded-md px-2 py-1'
+                    >
+                      +
+                    </button>
+                  </div>
+
+                  <span className='text-blue-600'>${(item.price * (quantities[item.id] || 1)).toFixed(2)}</span>
+
                   <button
                     onClick={() => removeFromCart(item.id)}
                     className='flex items-center justify-center text-blue-500 hover:text-blue-700'
