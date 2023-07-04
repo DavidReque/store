@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function celulares () {
   return (
-    <div>celulares</div>
+    <div className='min-h-screen max-h-screen'>CELULARES</div>
   )
 }
