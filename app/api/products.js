@@ -17,7 +17,8 @@ export const productList = [
     description: 'Laptop de alto rendimiento con pantalla OLED de 15 pulgadas y procesador Intel Core i7.',
     relatedProducts: [2, 3, 4],
     highlighted: true,
-    onSale: false
+    onSale: false,
+    category: 'laptops'
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const productList = [
     description: 'Teléfono inteligente con cámara de alta resolución, pantalla AMOLED de 6.2 pulgadas y procesador Exynos 2100.',
     relatedProducts: [1, 3, 5],
     highlighted: false,
-    onSale: true
+    onSale: true,
+    category: 'celulares'
   },
   {
     id: 3,
@@ -37,7 +39,8 @@ export const productList = [
     description: 'Computadora de escritorio con procesador Intel Core i5, 8 GB de RAM y almacenamiento SSD de 256 GB.',
     relatedProducts: [1, 2, 5],
     highlighted: false,
-    onSale: false
+    onSale: false,
+    category: 'laptops'
   },
   {
     id: 4,
@@ -47,7 +50,8 @@ export const productList = [
     description: 'Teléfono con pantalla AMOLED de 6.81 pulgadas, procesador Snapdragon 888 y cámara de 108 MP.',
     relatedProducts: [1, 5, 6],
     highlighted: true,
-    onSale: true
+    onSale: true,
+    category: 'celulares'
   },
   {
     id: 5,
@@ -57,7 +61,8 @@ export const productList = [
     description: 'Impresora láser con conectividad WiFi, impresión a doble cara y velocidad de impresión de hasta 30 ppm.',
     relatedProducts: [2, 3, 4],
     highlighted: false,
-    onSale: false
+    onSale: false,
+    category: 'impresoras'
   },
   {
     id: 6,
@@ -67,7 +72,8 @@ export const productList = [
     description: 'Computadora gaming con procesador Intel Core i9, tarjeta gráfica NVIDIA GeForce RTX 3080 y 16 GB de RAM.',
     relatedProducts: [4],
     highlighted: false,
-    onSale: false
+    onSale: false,
+    category: 'laptops'
   },
   {
     id: 7,
@@ -77,7 +83,8 @@ export const productList = [
     description: 'Monitor de 34 pulgadas con resolución QHD, formato de pantalla 21:9 y tecnología IPS.',
     relatedProducts: [],
     highlighted: false,
-    onSale: true
+    onSale: true,
+    category: 'monitores'
   },
   {
     id: 8,
@@ -87,7 +94,8 @@ export const productList = [
     description: 'Altavoces portátiles con conectividad Bluetooth, sonido estéreo y batería de larga duración.',
     relatedProducts: [],
     highlighted: true,
-    onSale: false
+    onSale: false,
+    category: 'altavoces'
   },
   {
     id: 9,
@@ -97,6 +105,7 @@ export const productList = [
     description: 'Teclado gaming mecánico con retroiluminación RGB, interruptores Cherry MX y reposamuñecas extraíble.',
     relatedProducts: [],
     highlighted: false,
-    onSale: false
+    onSale: false,
+    category: 'teclados'
   }
 ]
