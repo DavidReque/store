@@ -36,7 +36,7 @@ export default function ImpresorasProduct ({ params }) {
   }, [productos])
 
   return (
-    <div className='container mx-auto mt-10 h-[530px]'>
+    <div className='container mx-auto mt-10 max-h-[530px]'>
       <ToastContainer />
       <h1 className='text-2xl font-semibold mb-6 text-center'>Detalles del celular</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-6'>
