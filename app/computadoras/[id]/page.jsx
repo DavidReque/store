@@ -6,7 +6,7 @@ import { useContext, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function computadorasProduct ({ params }) {
+export default function ComputadorasProduct ({ params }) {
   const { addToCart } = useContext(CartContext)
 
   const productId = parseInt(params.id)
