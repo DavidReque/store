@@ -5,7 +5,7 @@ export default function computadoras () {
   const computadoras = productList.filter((pro) => pro.category === 'laptops')
 
   return (
-    <div className='h-[550px] mr-16 mb-16 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+    <div className='mr-16 mb-16 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
       {computadoras.map((pro) => (
         <Link href={`/computadoras/${pro.id}`} key={pro.id}>
           <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
