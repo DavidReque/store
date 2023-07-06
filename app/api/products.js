@@ -1,19 +1,9 @@
-import img1 from '../../public/products/laptop.jpg'
-import img2 from '../../public/products/laptop2.jpg'
-import img3 from '../../public/products/laptop3.jpg'
-import img4 from '../../public/products/celular.jpg'
-import img5 from '../../public/products/celular2.jpg'
-import img6 from '../../public/products/celular3.png'
-import img7 from '../../public/products/impresora.png'
-import img8 from '../../public/products/impresora2.jpg'
-import img9 from '../../public/products/impresora3.jpg'
-
 export const productList = [
   {
     id: 1,
     name: 'Laptop Dell XPS 15',
     price: 1499.99,
-    image: img1,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/227119-500-auto?v=1774980708&width=500&height=auto&aspect=true',
     description: 'Laptop de alto rendimiento con pantalla OLED de 15 pulgadas y procesador Intel Core i7.',
     relatedProducts: [2, 3, 4],
     highlighted: true,
@@ -24,7 +14,7 @@ export const productList = [
     id: 2,
     name: 'Teléfono Samsung Galaxy S21',
     price: 999.99,
-    image: img2,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/230880-500-auto?v=1774948224&width=500&height=auto&aspect=true',
     description: 'Teléfono inteligente con cámara de alta resolución, pantalla AMOLED de 6.2 pulgadas y procesador Exynos 2100.',
     relatedProducts: [1, 3, 5],
     highlighted: false,
@@ -35,7 +25,7 @@ export const productList = [
     id: 3,
     name: 'PC Dell Inspiron 5000',
     price: 799.99,
-    image: img3,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/227144-500-auto?v=1774998598&width=500&height=auto&aspect=true',
     description: 'Computadora de escritorio con procesador Intel Core i5, 8 GB de RAM y almacenamiento SSD de 256 GB.',
     relatedProducts: [1, 2, 5],
     highlighted: false,
@@ -46,7 +36,7 @@ export const productList = [
     id: 4,
     name: 'Celular Xiaomi Mi 11',
     price: 699.99,
-    image: img4,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/229761-500-auto?v=1775005647&width=500&height=auto&aspect=true',
     description: 'Teléfono con pantalla AMOLED de 6.81 pulgadas, procesador Snapdragon 888 y cámara de 108 MP.',
     relatedProducts: [1, 5, 6],
     highlighted: true,
@@ -57,7 +47,7 @@ export const productList = [
     id: 5,
     name: 'Impresora HP LaserJet Pro',
     price: 249.99,
-    image: img5,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/197418-500-auto?v=1774980947&width=500&height=auto&aspect=true',
     description: 'Impresora láser con conectividad WiFi, impresión a doble cara y velocidad de impresión de hasta 30 ppm.',
     relatedProducts: [2, 3, 4],
     highlighted: false,
@@ -68,7 +58,7 @@ export const productList = [
     id: 6,
     name: 'PC Gamer ASUS ROG Strix',
     price: 1999.99,
-    image: img6,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/231391-500-auto?v=1774990530&width=500&height=auto&aspect=true',
     description: 'Computadora gaming con procesador Intel Core i9, tarjeta gráfica NVIDIA GeForce RTX 3080 y 16 GB de RAM.',
     relatedProducts: [4],
     highlighted: false,
@@ -79,7 +69,7 @@ export const productList = [
     id: 7,
     name: 'Monitor LG Ultrawide',
     price: 399.99,
-    image: img7,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/210215-500-auto?v=1774951663&width=500&height=auto&aspect=true',
     description: 'Monitor de 34 pulgadas con resolución QHD, formato de pantalla 21:9 y tecnología IPS.',
     relatedProducts: [],
     highlighted: false,
@@ -90,7 +80,7 @@ export const productList = [
     id: 8,
     name: 'Altavoces Bluetooth JBL',
     price: 99.99,
-    image: img8,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/230352-500-auto?v=1774894000&width=500&height=auto&aspect=true',
     description: 'Altavoces portátiles con conectividad Bluetooth, sonido estéreo y batería de larga duración.',
     relatedProducts: [],
     highlighted: true,
@@ -101,7 +91,7 @@ export const productList = [
     id: 9,
     name: 'Teclado mecánico Corsair',
     price: 129.99,
-    image: img9,
+    image: 'https://diunsa.vtexassets.com/arquivos/ids/230572-500-auto?v=1774775483&width=500&height=auto&aspect=true',
     description: 'Teclado gaming mecánico con retroiluminación RGB, interruptores Cherry MX y reposamuñecas extraíble.',
     relatedProducts: [],
     highlighted: false,
