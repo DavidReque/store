@@ -56,7 +56,7 @@ export default function ProductsList () {
             <Link href={`/${product.id}`} key={product.id}>
               <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
                 <img
-                  src='https://diunsa.vtexassets.com/arquivos/ids/230911-500-auto?v=1774274838&width=500&height=auto&aspect=true'
+                  src={product.image}
                   alt={product.name}
                   className='w-full h-52 object-contain mb-4'
                 />

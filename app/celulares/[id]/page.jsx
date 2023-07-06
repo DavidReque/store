@@ -42,7 +42,7 @@ export default function CelularesProduct ({ params }) {
       <div className='flex flex-col md:flex-row justify-center items-center gap-6'>
         <img
           className='w-80 h-auto object-contain hover:opacity-75'
-          src='https://diunsa.vtexassets.com/arquivos/ids/228329-500-auto?v=1772581964&width=500&height=auto&aspect=true'
+          src={productos.image}
           alt={productos.name}
         />
         <div className='text-center'>

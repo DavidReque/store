@@ -9,7 +9,7 @@ export default function celulares () {
       {cel.map((pro) => (
         <Link href={`/celulares/${pro.id}`} key={pro.id}>
           <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
-            <img src='https://diunsa.vtexassets.com/arquivos/ids/231355-500-auto?v=1774840078&width=500&height=auto&aspect=true' />
+            <img src={pro.image} />
             <h2 className='text-lg font-bold mb-2'>{pro.name}</h2>
             <p className='text-gray-600 mb-2'>{pro.description}</p>
             <p className='text-blue-500 font-semibold'>{pro.price}</p>
