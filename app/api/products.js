@@ -49,7 +49,7 @@ export const productList = [
     price: 249.99,
     image: 'https://diunsa.vtexassets.com/arquivos/ids/197418-500-auto?v=1774980947&width=500&height=auto&aspect=true',
     description: 'Impresora láser con conectividad WiFi, impresión a doble cara y velocidad de impresión de hasta 30 ppm.',
-    relatedProducts: [2, 3, 4],
+    relatedProducts: [],
     highlighted: false,
     onSale: false,
     category: 'impresoras'
