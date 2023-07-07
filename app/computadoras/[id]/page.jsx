@@ -5,6 +5,7 @@ import { CartContext } from '@/app/context/CartContext'
 import { useContext, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import RelatedProductsPc from './ReloadProductsPc'
 
 export default function ComputadorasProduct ({ params }) {
   const { addToCart } = useContext(CartContext)
@@ -57,6 +58,10 @@ export default function ComputadorasProduct ({ params }) {
           </button>
         </div>
       </div>
+      <h2 className='bg-blue-300 rounded-3xl p-2 text-center mt-2 mb-8 mx-16'>
+        PRODUCTOS RELACIONADOS
+      </h2>
+      <RelatedProductsPc productId={productId} />
     </div>
   )
 }
