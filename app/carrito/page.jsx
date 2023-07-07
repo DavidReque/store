@@ -28,29 +28,45 @@ export default function Carrito () {
                   key={item.id}
                   className='flex items-center justify-between bg-white p-4 rounded-lg shadow-md'
                 >
-                  <li className='text-lg'>{item.name}</li>
+                  <div className='flex items-center flex-grow-0 flex-shrink-0'>
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className='w-12 h-12 object-cover mr-4'
+                    />
+                    <div>
+                      <h3 className='text-lg font-bold'>{item.name}</h3>
+                      <p className='text-gray-500'>Precio: ${item.price.toFixed(2)}</p>
+                    </div>
+                  </div>
+
                   <div className='flex items-center'>
                     <button
-                      onClick={() => handleQuantityChange(item.id, (quantities[item.id] || 1) - 1)}
+                      onClick={() =>
+                        handleQuantityChange(item.id, (quantities[item.id] || 1) - 1)}
                       className='border rounded-md px-2 py-1'
                     >
                       -
                     </button>
                     <input
                       type='number'
-                      value={quantities[item.id] || 1} // Valor predeterminado de cantidad: 1
-                      onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
+                      value={quantities[item.id] || 1}
+                      onChange={(e) =>
+                        handleQuantityChange(item.id, parseInt(e.target.value))}
                       className='border rounded-md p-1 mx-2 w-24 text-center'
                     />
                     <button
-                      onClick={() => handleQuantityChange(item.id, (quantities[item.id] || 1) + 1)}
+                      onClick={() =>
+                        handleQuantityChange(item.id, (quantities[item.id] || 1) + 1)}
                       className='border rounded-md px-2 py-1'
                     >
                       +
                     </button>
                   </div>
 
-                  <span className='text-blue-600'>${(item.price * (quantities[item.id] || 1)).toFixed(2)}</span>
+                  <span className='text-blue-600'>
+                    ${(item.price * (quantities[item.id] || 1)).toFixed(2)}
+                  </span>
 
                   <button
                     onClick={() => removeFromCart(item.id)}
@@ -64,11 +80,7 @@ export default function Carrito () {
                       stroke='currentColor'
                       className='w-6 h-6'
                     >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M6 18L18 6M6 6l12 12'
-                      />
+                      <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
                     </svg>
                   </button>
                 </div>
