@@ -15,7 +15,7 @@ export default function Carrito () {
   }
 
   return (
-    <div className='p-4 h-[575px]'>
+    <div className='p-4 min-h-screen max-h-screen'>
       {cartItems.length <= 0
         ? (
           <h1 className='text-center text-xl'>Tu carrito está vacío</h1>
@@ -26,9 +26,9 @@ export default function Carrito () {
               {cartItems.map((item) => (
                 <div
                   key={item.id}
-                  className='flex items-center justify-between bg-white p-4 rounded-lg shadow-md'
+                  className='flex flex-col sm:flex-row items-center justify-between bg-white p-4 rounded-lg shadow-md'
                 >
-                  <div className='flex items-center flex-grow-0 flex-shrink-0'>
+                  <div className='flex items-center mb-2 sm:mb-0'>
                     <img
                       src={item.image}
                       alt={item.name}
