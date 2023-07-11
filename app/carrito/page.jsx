@@ -2,6 +2,7 @@
 
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../context/CartContext'
+import Total from './total'
 
 export default function Carrito () {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext)
@@ -94,6 +95,7 @@ export default function Carrito () {
             </button>
           </div>
           )}
+      <Total cartItems={cartItems} quantities={quantities} />
     </div>
   )
 }
