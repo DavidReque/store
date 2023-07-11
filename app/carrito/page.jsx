@@ -95,7 +95,13 @@ export default function Carrito () {
             </button>
           </div>
           )}
-      <Total cartItems={cartItems} quantities={quantities} />
+      {cartItems.length <= 0
+        ? ('')
+        : (
+          <div>
+            <Total cartItems={cartItems} quantities={quantities} />
+          </div>
+          )}
     </div>
   )
 }
