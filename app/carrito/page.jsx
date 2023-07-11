@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import Total from './total'
 
@@ -14,6 +14,13 @@ export default function Carrito () {
       [productId]: quantity
     }))
   }
+
+  useEffect(() => {
+    document.title = 'Carrito'
+    return () => {
+      document.title = 'Online Store'
+    }
+  }, [])
 
   return (
     <div className='p-4 min-h-screen max-h-screen'>
