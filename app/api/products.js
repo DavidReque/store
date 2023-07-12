@@ -107,6 +107,6 @@ export const productList = [
     relatedProducts: [1, 3, 6],
     highlighted: true,
     onSale: false,
-    category: 'computadoras'
+    category: 'laptops'
   }
 ]
