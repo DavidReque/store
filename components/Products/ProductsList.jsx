@@ -29,8 +29,9 @@ export default function ProductsList () {
     return true
   }
 
-  const filteredProducts = productList.filter(filterProductsByPriceRange)
-
+  const filteredProducts = productList.filter(
+    (product) => filterProductsByPriceRange(product) && product.highlighted
+  )
   return (
     <div>
       <div>
