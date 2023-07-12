@@ -39,7 +39,7 @@ export default function ComputadorasProduct ({ params }) {
   return (
     <div className='container mx-auto mt-10'>
       <ToastContainer />
-      <h1 className='text-2xl font-semibold mb-6 text-center'>Detalles del celular</h1>
+      <h1 className='text-2xl font-semibold mb-6 text-center'>Detalles del producto</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-6'>
         <img
           className='w-80 h-auto object-contain hover:opacity-75'

@@ -41,11 +41,11 @@ export default function HeroBanner () {
           <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F01%2FiPhone-14-pill.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=0b3dff8d1ecfc2658ff86028a588885603dacf792185bffbadb144ff61e808a3&ipo=images' />
         </div>
         <div>
-          <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F01%2FiPhone-14-pill.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=0b3dff8d1ecfc2658ff86028a588885603dacf792185bffbadb144ff61e808a3&ipo=images' />
+          <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://pcprozone.com/img/cms/BANNERGAMINGZONE.jpg' />
         </div>
-        <div>
+        {/* <div>
           <img className='aspect-[16/10] md:aspect-auto object-cover' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F01%2FiPhone-14-pill.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=0b3dff8d1ecfc2658ff86028a588885603dacf792185bffbadb144ff61e808a3&ipo=images' />
-        </div>
+        </div> */}
       </Carousel>
     </div>
   )
