@@ -163,5 +163,60 @@ export const productList = [
     highlighted: false,
     onSale: true,
     category: 'auriculares'
+  },
+  {
+    id: 16,
+    name: 'Kit de limpieza para computadoras',
+    price: 19.99,
+    image: 'https://computoyaccesoriosvaca.com/wp-content/uploads/2021/11/a8.jpg',
+    description: 'El kit de limpieza para computadoras incluye soluciones y herramientas esenciales para mantener tu equipo libre de polvo y suciedad. Incluye líquido limpiador, paños de microfibra y pinceles antiestáticos.',
+    relatedProducts: [17, 18, 19, 20],
+    highlighted: true,
+    onSale: false,
+    category: 'mantenimientoPc'
+  },
+  {
+    id: 17,
+    name: 'Spray de aire comprimido',
+    price: 9.99,
+    image: 'https://www.officedepot.com.hn/medias/000016061T4.gif-515ftw?context=bWFzdGVyfHJvb3R8MTY2ODV8aW1hZ2UvZ2lmfGg5ZC9oOGIvOTM1NzIwNjA2MTA4Ni5naWZ8MjEzODU5ODdhMTg2NDQyYjZiNGE5NzUyZDE1MDU2ODMxYWRhNGQxM2EzMDQ1MTE4YmJjN2VjYjg3MDFmMTE3Mw',
+    description: 'El spray de aire comprimido es ideal para eliminar el polvo y los residuos de difícil acceso en tu computadora. Su boquilla precisa y potente expulsa ráfagas de aire limpio sin dañar los componentes internos.',
+    relatedProducts: [16, 18, 19, 20],
+    highlighted: false,
+    onSale: true,
+    category: 'mantenimientoPc'
+  },
+  {
+    id: 18,
+    name: 'Pasta térmica',
+    price: 14.99,
+    image: 'https://isitechhn.com/cdn/shop/products/SABO-56-0078-PASTA.png?v=1622299522',
+    description: 'La pasta térmica de alto rendimiento es ideal para optimizar la transferencia de calor entre el procesador y el disipador de calor. Su fórmula especial garantiza una mejor disipación térmica y una mayor eficiencia en el enfriamiento de tu computadora.',
+    relatedProducts: [16, 17, 19, 20],
+    highlighted: true,
+    onSale: false,
+    category: 'mantenimientoPc'
+  },
+  {
+    id: 19,
+    name: 'Destornillador magnético para computadoras',
+    price: 6.99,
+    image: 'https://www.intelcomphonduras.com/wp-content/uploads/2020/11/Juego-de-destornilladores-aislados-con-garant%C3%ADa-de-por-vida-incluida-todo-en-uno-de-13-piezas-de-destornillador-Torx-Phillips-magn%C3%A9tico-CR-V-Eacker-600x600.jpg',
+    description: 'El destornillador magnético para computadoras facilita la manipulación de tornillos pequeños durante tareas de mantenimiento. Su punta magnética evita la pérdida de tornillos y facilita su colocación en espacios reducidos.',
+    relatedProducts: [16, 17, 18, 20],
+    highlighted: false,
+    onSale: false,
+    category: 'mantenimientoPc'
+  },
+  {
+    id: 20,
+    name: 'Cepillo antiestático',
+    price: 4.99,
+    image: 'https://hifisac.com/web/image/product.template/2038/image_1024?unique=0dc73c4',
+    description: 'El cepillo antiestático es esencial para limpiar y eliminar la acumulación de polvo en componentes electrónicos sensibles. Sus cerdas suaves y antiestáticas aseguran una limpieza segura y libre de estática.',
+    relatedProducts: [16, 17, 18, 19],
+    highlighted: false,
+    onSale: true,
+    category: 'mantenimientoPc'
   }
 ]
