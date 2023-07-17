@@ -108,5 +108,60 @@ export const productList = [
     highlighted: true,
     onSale: false,
     category: 'laptops'
+  },
+  {
+    id: 11,
+    name: 'Auriculares inalámbricos Sony WH-1000XM4',
+    price: 349.99,
+    image: 'https://www.sony.com.hn/image/6ff70f66ce935f02861635b3e936a70c?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF',
+    description: 'Los auriculares inalámbricos Sony WH-1000XM4 ofrecen una calidad de sonido excepcional y una cancelación de ruido líder en su clase. Son cómodos de llevar durante largos períodos de tiempo y cuentan con funciones avanzadas como el control táctil y la asistente de voz integrada.',
+    relatedProducts: [13, 16, 19],
+    highlighted: true,
+    onSale: false,
+    category: 'auriculares'
+  },
+  {
+    id: 12,
+    name: 'Auriculares inalámbricos Apple AirPods Pro',
+    price: 249.99,
+    image: 'https://jet-web.s3.us-west-1.amazonaws.com/images/catalog/public/42707d0a901610ab52a1dd2962b8b44a.webp',
+    description: 'Los auriculares inalámbricos Apple AirPods Pro ofrecen un sonido envolvente de alta calidad y cancelación activa de ruido. Son fáciles de configurar y se ajustan cómodamente en los oídos. Además, cuentan con resistencia al agua y funciones inteligentes como la activación de Siri con comandos de voz.',
+    relatedProducts: [14, 17, 20],
+    highlighted: true,
+    onSale: false,
+    category: 'auriculares'
+  },
+  {
+    id: 13,
+    name: 'Auriculares Bluetooth JBL Free X',
+    price: 99.99,
+    image: 'https://m.media-amazon.com/images/I/61ezYh5NIbL._AC_UF1000,1000_QL80_.jpg',
+    description: 'Los auriculares Bluetooth JBL Free X ofrecen un sonido potente y una conexión inalámbrica estable. Son compactos, ligeros y vienen con estuche de carga. Ideales para escuchar música y hacer llamadas sin cables.',
+    relatedProducts: [12, 14, 16],
+    highlighted: false,
+    onSale: true,
+    category: 'auriculares'
+  },
+  {
+    id: 14,
+    name: 'Auriculares inalámbricos Samsung Galaxy Buds Pro',
+    price: 199.99,
+    image: 'https://images-na.ssl-images-amazon.com/images/I/51c8jaXEp+S._AC_UL600_SR600,600_.jpg',
+    description: 'Los auriculares inalámbricos Samsung Galaxy Buds Pro ofrecen un sonido inmersivo y funciones avanzadas. Cuentan con cancelación de ruido inteligente, resistencia al agua y duración de batería prolongada. Además, se pueden emparejar fácilmente con dispositivos Samsung Galaxy.',
+    relatedProducts: [11, 13, 15],
+    highlighted: false,
+    onSale: false,
+    category: 'auriculares'
+  },
+  {
+    id: 15,
+    name: 'Auriculares inalámbricos Beats Solo3',
+    price: 299.99,
+    image: 'https://cdn.idealo.com/folder/Product/5116/3/5116304/s11_produktbild_gross_11/beats-by-dre-solo3-wireless.jpg',
+    description: 'Los auriculares inalámbricos Beats Solo3 ofrecen un sonido nítido y potente. Son plegables, cómodos de llevar y tienen una duración de batería de hasta 40 horas. Perfectos para disfrutar de la música con estilo.',
+    relatedProducts: [12, 14, 16],
+    highlighted: false,
+    onSale: true,
+    category: 'auriculares'
   }
 ]
