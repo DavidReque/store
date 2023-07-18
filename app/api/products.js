@@ -244,10 +244,32 @@ export const productList = [
   {
     id: 23,
     name: 'Silla gamer',
-    price: 24.99,
-    image: 'https://ss628.liverpool.com.mx/xl/1116144944.jpg',
+    price: 200.00,
+    image: 'https://www.officedepot.com.hn/medias/27657.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MjY1NjYzfGltYWdlL2pwZWd8aDI2L2gzYy8xMDUwODAwMjY1NjI4Ni8yNzY1Ny5qcGdfMTIwMGZ0d3xiZjE2MWU2MTM5N2FlOTI3MzEzZDEwZmEwZjczNjM5MmQ3ODQ3ZTY4N2IwZDM4ZTY0YjZhZGRlYWZkMTI2YTcy',
     description: 'Silla gamer comoda y de alta calidad.',
-    relatedProducts: [],
+    relatedProducts: [24, 25],
+    highlighted: true,
+    onSale: false,
+    category: 'gamer'
+  },
+  {
+    id: 24,
+    name: 'Teclado gamer',
+    price: 50.99,
+    image: 'https://www.officedepot.com.hn/medias/22705.jpg-1200ftw?context=bWFzdGVyfHJvb3R8NTI0MTEzfGltYWdlL2pwZWd8aDUxL2hmNi8xMTAzNTI1MTUwNzIzMC8yMjcwNS5qcGdfMTIwMGZ0d3xjODFhOTQyMjEwZWE3Zjg5NTYwYzhmNjJhMmMzZjZkMGUzMjhmMjYxYWVjZGY4ZGRlMDZhZGE3ODU5Yjk4NDEx',
+    description: 'TECLADO (GAMER) SPECTRA (METÁLICO)',
+    relatedProducts: [25, 23],
+    highlighted: true,
+    onSale: false,
+    category: 'gamer'
+  },
+  {
+    id: 25,
+    name: 'Auriculares gamer',
+    price: 4.33,
+    image: 'https://http2.mlstatic.com/D_NQ_NP_811322-MLA45616465154_042021-O.webp',
+    description: 'Con los Onikuma K1B RGB no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.s',
+    relatedProducts: [23, 24],
     highlighted: true,
     onSale: false,
     category: 'gamer'
