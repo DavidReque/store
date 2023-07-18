@@ -268,10 +268,43 @@ export const productList = [
     name: 'Auriculares gamer',
     price: 4.33,
     image: 'https://http2.mlstatic.com/D_NQ_NP_811322-MLA45616465154_042021-O.webp',
-    description: 'Con los Onikuma K1B RGB no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.s',
+    description: 'Con los Onikuma K1B RGB no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.',
     relatedProducts: [23, 24],
     highlighted: true,
     onSale: false,
     category: 'gamer'
+  },
+  {
+    id: 26,
+    name: 'Cargador de coche inalámbrico',
+    price: 25.95,
+    image: 'https://i.ebayimg.com/thumbs/images/g/5RYAAOSwI7ZjL1A2/s-l225.webp',
+    description: 'Cargador de coche inalámbrico 15 vatios cargador de coche inalámbrico con anillo magnético - óvalo',
+    relatedProducts: [27, 29],
+    highlighted: true,
+    onSale: false,
+    category: 'accesoriosCel'
+  },
+  {
+    id: 27,
+    name: 'Cargador Rápido 25W USB-C',
+    price: 5.49,
+    image: 'https://i.ebayimg.com/images/g/-ygAAOSwm~ZiUvbo/s-l1600.jpg',
+    description: 'Original Samsung Super Cargador Rápido 25W USB-C Cable Galaxy S21 S22 S23 Ultra',
+    relatedProducts: [26, 28],
+    highlighted: true,
+    onSale: false,
+    category: 'accesoriosCel'
+  },
+  {
+    id: 28,
+    name: 'Cargador rápido de alimentación original Apple',
+    price: 24.99,
+    image: 'https://i.ebayimg.com/images/g/CQMAAOSwO7VhsSgn/s-l300.jpg',
+    description: 'Cargador rápido de alimentación original Apple 20W USB-C iPhone 12 13 14 Pro Max + cable USB-C',
+    relatedProducts: [26, 27],
+    highlighted: true,
+    onSale: false,
+    category: 'accesoriosCel'
   }
 ]

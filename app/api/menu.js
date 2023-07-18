@@ -15,9 +15,8 @@ export const data = [
     name: 'Celulares',
     url: '/celulares',
     subCategories: [
-      { id: 1, name: 'Fundas', url: './celulares/fundas' },
-      { id: 2, name: 'Auriculares', url: '/celulares/auriculares' },
-      { id: 3, name: 'Accesorios', url: '/celulares/accesorios' }
+      { id: 1, name: 'Auriculares', url: '/celulares/auriculares' },
+      { id: 2, name: 'Accesorios', url: '/celulares/accesorios' }
     ]
   },
   {
