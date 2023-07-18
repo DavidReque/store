@@ -23,7 +23,7 @@ export default function Carrito () {
   }, [])
 
   return (
-    <div className='p-4 min-h-screen max-h-screen'>
+    <div className='p-4 h-screen'>
       {cartItems.length <= 0
         ? (
           <h1 className='text-center text-xl'>Tu carrito está vacío</h1>
