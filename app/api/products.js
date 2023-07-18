@@ -71,10 +71,10 @@ export const productList = [
     price: 399.99,
     image: 'https://jet-web.s3.us-west-1.amazonaws.com/images/catalog/public/24MP59G-P-large01.webp',
     description: 'Monitor de 34 pulgadas con resolución QHD, formato de pantalla 21:9 y tecnología IPS.',
-    relatedProducts: [],
+    relatedProducts: [21, 22, 9],
     highlighted: true,
     onSale: true,
-    category: 'monitores'
+    category: 'accesoriosPc'
   },
   {
     id: 8,
@@ -93,10 +93,10 @@ export const productList = [
     price: 129.99,
     image: 'https://rymportatiles.com.pe/wp-content/uploads/2023/03/DeepCool-KB500-RGB-01.png',
     description: 'Teclado gaming mecánico con retroiluminación RGB, interruptores Cherry MX y reposamuñecas extraíble.',
-    relatedProducts: [],
+    relatedProducts: [7, 21, 22],
     highlighted: true,
     onSale: false,
-    category: 'teclados'
+    category: 'accesoriosPc'
   },
   {
     id: 10,
@@ -218,5 +218,38 @@ export const productList = [
     highlighted: false,
     onSale: true,
     category: 'mantenimientoPc'
+  },
+  {
+    id: 21,
+    name: 'Mouse inalámbrico',
+    price: 24.99,
+    image: 'https://sycomhn.com/wp-content/uploads/2022/10/Inalambrico-Dell-WM126-Negro.jpg',
+    description: 'El mouse inalámbrico ofrece comodidad y libertad de movimiento mientras utilizas tu computadora.',
+    relatedProducts: [7, 9, 22],
+    highlighted: true,
+    onSale: false,
+    category: 'accesoriosPc'
+  },
+  {
+    id: 22,
+    name: 'Mouse alambrico',
+    price: 20.99,
+    image: 'https://ss628.liverpool.com.mx/xl/1116144944.jpg',
+    description: 'El mouse alámbrico ofrece comodidad y seguridad de movimiento mientras utilizas tu computadora.',
+    relatedProducts: [7, 9, 21],
+    highlighted: true,
+    onSale: false,
+    category: 'accesoriosPc'
+  },
+  {
+    id: 23,
+    name: 'Silla gamer',
+    price: 24.99,
+    image: 'https://ss628.liverpool.com.mx/xl/1116144944.jpg',
+    description: 'Silla gamer comoda y de alta calidad.',
+    relatedProducts: [],
+    highlighted: true,
+    onSale: false,
+    category: 'gamer'
   }
 ]
