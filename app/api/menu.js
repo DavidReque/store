@@ -24,8 +24,8 @@ export const data = [
     name: 'Impresoras',
     url: '/impresoras',
     subCategories: [
-      { id: 1, name: 'Mantenimiento', url: './impresoras/mantenimiento' },
-      { id: 3, name: 'Accesorios', url: '/impresoras/accesorios' }
+      { id: 1, name: 'Mantenimiento', url: './impresoras/mantenimiento' }
+      // { id: 3, name: 'Accesorios', url: '/impresoras/accesorios' }
     ]
   }
 ]

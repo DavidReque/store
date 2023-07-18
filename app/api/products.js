@@ -280,7 +280,7 @@ export const productList = [
     price: 25.95,
     image: 'https://i.ebayimg.com/thumbs/images/g/5RYAAOSwI7ZjL1A2/s-l225.webp',
     description: 'Cargador de coche inalámbrico 15 vatios cargador de coche inalámbrico con anillo magnético - óvalo',
-    relatedProducts: [27, 29],
+    relatedProducts: [27, 28],
     highlighted: true,
     onSale: false,
     category: 'accesoriosCel'
@@ -306,5 +306,27 @@ export const productList = [
     highlighted: true,
     onSale: false,
     category: 'accesoriosCel'
+  },
+  {
+    id: 29,
+    name: 'Tinta impresora Epson',
+    price: 30.88,
+    image: 'https://epson.com.pe/medias/20Nik-Pum-ink-31-r2-v2.jpg?context=bWFzdGVyfHJvb3R8MTU5NTQ0fGltYWdlL2pwZWd8aDQxL2hhNi85NjUzNDcxMDE5MDM4LmpwZ3xkMmI3MTczYWU5OGZkNzZlYzg5ZjdiYWU3ZmZkMzgxYTkwOTY4NzA1MjE1OTI2NWE1MmMxOTIyY2UzNGVlY2Yx',
+    description: 'Pack de tintas originales Epson para impresoras Ecotank',
+    relatedProducts: [30],
+    highlighted: true,
+    onSale: false,
+    category: 'mantenimientoImpresora'
+  },
+  {
+    id: 30,
+    name: 'Cartuchos impresora Epson',
+    price: 30.88,
+    image: 'https://m.media-amazon.com/images/I/71OE373mKzL.jpg',
+    description: 'Cartucho de tinta remanufacturado de repuesto para impresora Epson 288XL 288 XL (2 negros, 1 cian, 1 magenta, 1 amarillo, paquete de 5)',
+    relatedProducts: [29],
+    highlighted: true,
+    onSale: false,
+    category: 'mantenimientoImpresora'
   }
 ]
