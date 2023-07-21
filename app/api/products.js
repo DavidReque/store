@@ -25,7 +25,7 @@ export const productList = [
     id: 3,
     name: 'PC Dell Inspiron 5000',
     price: 799.99,
-    image: 'https://diunsa.vtexassets.com/arquivos/ids/227144-500-auto?v=1774998598&width=500&height=auto&aspect=true',
+    image: 'https://cucuyagua.solutekla.com/photo/1/dell/portatiles/portatil_dell_inspiron_15_5000_gaming_serie_5577_core_i57300hq_4gb_1tb_5400_rpm_windows_10_ho/portatil_dell_inspiron_15_5000_gaming_serie_5577_core_i57300hq_4gb_1tb_5400_rpm_windows_10_ho_0001',
     description: 'Computadora de escritorio con procesador Intel Core i5, 8 GB de RAM y almacenamiento SSD de 256 GB.',
     relatedProducts: [1, 6, 10],
     highlighted: true,
@@ -237,7 +237,7 @@ export const productList = [
     image: 'https://ss628.liverpool.com.mx/xl/1116144944.jpg',
     description: 'El mouse alámbrico ofrece comodidad y seguridad de movimiento mientras utilizas tu computadora.',
     relatedProducts: [7, 9, 21],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'accesoriosPc'
   },
@@ -248,7 +248,7 @@ export const productList = [
     image: 'https://www.officedepot.com.hn/medias/27657.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MjY1NjYzfGltYWdlL2pwZWd8aDI2L2gzYy8xMDUwODAwMjY1NjI4Ni8yNzY1Ny5qcGdfMTIwMGZ0d3xiZjE2MWU2MTM5N2FlOTI3MzEzZDEwZmEwZjczNjM5MmQ3ODQ3ZTY4N2IwZDM4ZTY0YjZhZGRlYWZkMTI2YTcy',
     description: 'Silla gamer comoda y de alta calidad.',
     relatedProducts: [24, 25],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'gamer'
   },
@@ -270,7 +270,7 @@ export const productList = [
     image: 'https://http2.mlstatic.com/D_NQ_NP_811322-MLA45616465154_042021-O.webp',
     description: 'Con los Onikuma K1B RGB no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.',
     relatedProducts: [23, 24],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'gamer'
   },
@@ -281,7 +281,7 @@ export const productList = [
     image: 'https://i.ebayimg.com/thumbs/images/g/5RYAAOSwI7ZjL1A2/s-l225.webp',
     description: 'Cargador de coche inalámbrico 15 vatios cargador de coche inalámbrico con anillo magnético - óvalo',
     relatedProducts: [27, 28],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'accesoriosCel'
   },
@@ -292,7 +292,7 @@ export const productList = [
     image: 'https://i.ebayimg.com/images/g/-ygAAOSwm~ZiUvbo/s-l1600.jpg',
     description: 'Original Samsung Super Cargador Rápido 25W USB-C Cable Galaxy S21 S22 S23 Ultra',
     relatedProducts: [26, 28],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'accesoriosCel'
   },
@@ -303,7 +303,7 @@ export const productList = [
     image: 'https://i.ebayimg.com/images/g/CQMAAOSwO7VhsSgn/s-l300.jpg',
     description: 'Cargador rápido de alimentación original Apple 20W USB-C iPhone 12 13 14 Pro Max + cable USB-C',
     relatedProducts: [26, 27],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'accesoriosCel'
   },
@@ -314,7 +314,7 @@ export const productList = [
     image: 'https://epson.com.pe/medias/20Nik-Pum-ink-31-r2-v2.jpg?context=bWFzdGVyfHJvb3R8MTU5NTQ0fGltYWdlL2pwZWd8aDQxL2hhNi85NjUzNDcxMDE5MDM4LmpwZ3xkMmI3MTczYWU5OGZkNzZlYzg5ZjdiYWU3ZmZkMzgxYTkwOTY4NzA1MjE1OTI2NWE1MmMxOTIyY2UzNGVlY2Yx',
     description: 'Pack de tintas originales Epson para impresoras Ecotank',
     relatedProducts: [30],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'mantenimientoImpresora'
   },
@@ -325,7 +325,7 @@ export const productList = [
     image: 'https://m.media-amazon.com/images/I/71OE373mKzL.jpg',
     description: 'Cartucho de tinta remanufacturado de repuesto para impresora Epson 288XL 288 XL (2 negros, 1 cian, 1 magenta, 1 amarillo, paquete de 5)',
     relatedProducts: [29],
-    highlighted: true,
+    highlighted: false,
     onSale: false,
     category: 'mantenimientoImpresora'
   }
