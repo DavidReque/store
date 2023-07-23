@@ -1,20 +1,14 @@
 'use client'
 
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import Total from './Total'
 import Button from './Button'
 
 export default function Carrito () {
-  const { cartItems, removeFromCart, clearCart } = useContext(CartContext)
-  const [quantities, setQuantities] = useState({})
-
-  const handleQuantityChange = (productId, quantity) => {
-    setQuantities((prevQuantities) => ({
-      ...prevQuantities,
-      [productId]: quantity
-    }))
-  }
+  const { cartItems, removeFromCart, clearCart, quantities, handleQuantityChange } = useContext(
+    CartContext
+  )
 
   useEffect(() => {
     document.title = 'Carrito'
@@ -38,11 +32,7 @@ export default function Carrito () {
                   className='flex flex-col sm:flex-row items-center justify-between bg-white p-4 rounded-lg shadow-md'
                 >
                   <div className='flex items-center mb-2 sm:mb-0 my-4'>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className='w-12 h-12 object-cover mr-4'
-                    />
+                    <img src={item.image} alt={item.name} className='w-12 h-12 object-cover mr-4' />
                     <div>
                       <h3 className='text-lg font-bold'>{item.name}</h3>
                       <p className='text-gray-500'>Precio: ${item.price.toFixed(2)}</p>
@@ -51,8 +41,7 @@ export default function Carrito () {
 
                   <div className='flex items-center'>
                     <button
-                      onClick={() =>
-                        handleQuantityChange(item.id, (quantities[item.id] || 1) - 1)}
+                      onClick={() => handleQuantityChange(item.id, (quantities[item.id] || 1) - 1)}
                       className='border rounded-md px-2 py-1'
                     >
                       -
@@ -60,13 +49,11 @@ export default function Carrito () {
                     <input
                       type='number'
                       value={quantities[item.id] || 1}
-                      onChange={(e) =>
-                        handleQuantityChange(item.id, parseInt(e.target.value))}
+                      onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
                       className='border rounded-md p-1 mx-2 w-24 text-center'
                     />
                     <button
-                      onClick={() =>
-                        handleQuantityChange(item.id, (quantities[item.id] || 1) + 1)}
+                      onClick={() => handleQuantityChange(item.id, (quantities[item.id] || 1) + 1)}
                       className='border rounded-md px-2 py-1'
                     >
                       +

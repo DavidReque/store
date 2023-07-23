@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-export default function Total ({ cartItems, quantities }) {
+export default function Total () {
   const [total, setTotal] = useState(0)
+  const { cartItems, quantities } = useContext(CartContext)
 
   useEffect(() => {
     let calculoTotal = 0
