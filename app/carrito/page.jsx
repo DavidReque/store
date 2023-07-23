@@ -31,13 +31,13 @@ export default function Carrito () {
           )
         : (
           <div>
-            <ul className='space-y-4'>
+            <ul className='space-y-4 m-6'>
               {cartItems.map((item) => (
                 <div
                   key={item.id}
                   className='flex flex-col sm:flex-row items-center justify-between bg-white p-4 rounded-lg shadow-md'
                 >
-                  <div className='flex items-center mb-2 sm:mb-0'>
+                  <div className='flex items-center mb-2 sm:mb-0 my-4'>
                     <img
                       src={item.image}
                       alt={item.name}
@@ -97,7 +97,7 @@ export default function Carrito () {
             </ul>
             <button
               onClick={clearCart}
-              className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+              className='mt-4 mx-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
             >
               Limpiar carrito
             </button>
