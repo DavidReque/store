@@ -1,11 +1,9 @@
-import CheckoutForm from '@/components/Forms/CheckoutForm'
-import InfoProduct from './InfoProduct'
+import Check from './Check'
 
 export default function page () {
   return (
     <div>
-      <InfoProduct />
-      <CheckoutForm />
+      <Check />
     </div>
   )
 }
