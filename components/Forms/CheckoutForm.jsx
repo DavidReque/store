@@ -1,11 +1,17 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import dynamic from 'next/dynamic'
 import 'react-toastify/dist/ReactToastify.css'
+import { CartContext } from '@/app/context/CartContext'
+import { useRouter } from 'next/navigation'
+import { confirmAlert } from 'react-confirm-alert'
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 export function CheckoutForm () {
+  const { clearCart } = useContext(CartContext)
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,19 +29,46 @@ export function CheckoutForm () {
     })
   }
 
+  const router = useRouter()
+
   const handleSubmit = (e) => {
     e.preventDefault()
     // Aquí puedes procesar la información del formulario, por ejemplo, enviarla a un servidor o realizar alguna acción con ella.
     console.log('Formulario enviado:', formData)
-    toast.success('Felicidades por tu compra', {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 3000, // Duración de la notificación en milisegundos
-      hideProgressBar: false, // Ocultar la barra de progreso
-      closeOnClick: true, // Cerrar la notificación al hacer clic
-      pauseOnHover: true, // Pausar la notificación al pasar el mouse
-      draggable: false, // No permitir arrastrar la notificación
-      progress: undefined // Personalizar el componente de progreso
 
+    confirmAlert({
+      title: 'Seras redireccionado al inicio',
+      message: '¿Estás seguro de que deseas finalizar la compra?',
+      buttons: [
+        {
+          label: 'Sí',
+          onClick: () => {
+            // Muestra la notificación después de procesar el formulario
+            toast.success('Felicidades por tu compra', {
+              position: toast.POSITION.TOP_CENTER,
+              autoClose: 3000, // Duración de la notificación en milisegundos
+              hideProgressBar: false, // Ocultar la barra de progreso
+              closeOnClick: true, // Cerrar la notificación al hacer clic
+              pauseOnHover: true, // Pausar la notificación al pasar el mouse
+              draggable: false, // No permitir arrastrar la notificación
+              progress: undefined // Personalizar el componente de progreso
+            })
+
+            // Vaciar el carrito después de la compra
+            clearCart()
+
+            // Redireccionar a la página de inicio después de la compra (por ejemplo, '/')
+            router.push('/')
+          }
+        },
+        {
+          label: 'No',
+          onClick: () => {
+            // El usuario eligió no finalizar la compra
+            console.log('Compra cancelada')
+          }
+        }
+      ]
     })
   }
 
