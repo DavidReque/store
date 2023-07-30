@@ -1,9 +1,7 @@
 'use client'
 
 import React, { useContext, useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
 import dynamic from 'next/dynamic'
-import 'react-toastify/dist/ReactToastify.css'
 import { CartContext } from '@/app/context/CartContext'
 import { useRouter } from 'next/navigation'
 import { confirmAlert } from 'react-confirm-alert'
@@ -43,17 +41,6 @@ export function CheckoutForm () {
         {
           label: 'Sí',
           onClick: () => {
-            // Muestra la notificación después de procesar el formulario
-            toast.success('Felicidades por tu compra', {
-              position: toast.POSITION.TOP_CENTER,
-              autoClose: 3000, // Duración de la notificación en milisegundos
-              hideProgressBar: false, // Ocultar la barra de progreso
-              closeOnClick: true, // Cerrar la notificación al hacer clic
-              pauseOnHover: true, // Pausar la notificación al pasar el mouse
-              draggable: false, // No permitir arrastrar la notificación
-              progress: undefined // Personalizar el componente de progreso
-            })
-
             // Vaciar el carrito después de la compra
             clearCart()
 
@@ -74,8 +61,7 @@ export function CheckoutForm () {
 
   return (
     <div className='container mx-auto mt-8 px-4 md:flex'>
-      <ToastContainer />
-      <div className='bg-white p-6 rounded-lg shadow-lg md:w-1/2'>
+      <div className='bg-white p-6 rounded-lg shadow-lg md:w-1/2 my-9 mx-6'>
         <h2 className='text-2xl font-semibold mb-4'>Información de contacto</h2>
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
@@ -177,7 +163,7 @@ export function CheckoutForm () {
         </form>
       </div>
       <div className='md:w-1/2 px-4'>
-        <div className='bg-white p-6 rounded-lg shadow-lg'>
+        <div className='bg-white p-6 rounded-lg shadow-lg my-8'>
           <h2 className='text-2xl font-semibold mb-4'>Condiciones de compra</h2>
           <div>
             <h3>Condiciones de Compra</h3>
