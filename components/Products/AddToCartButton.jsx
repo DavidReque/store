@@ -1,3 +1,5 @@
+'use client'
+
 import { CartContext } from '@/app/context/CartContext'
 import React, { useContext } from 'react'
 import { toast } from 'react-toastify'
