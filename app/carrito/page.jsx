@@ -35,7 +35,7 @@ export default function Carrito () {
                     <img src={item.image} alt={item.name} className='w-12 h-12 object-cover mr-4' />
                     <div>
                       <h3 className='text-lg font-bold'>{item.name}</h3>
-                      <p className='text-gray-500'>Precio: ${item.price.toFixed(2)}</p>
+                      <p className='text-gray-500'>Precio: ${item.price ? item.price.toFixed(2) : 'N/A'}</p>
                     </div>
                   </div>
 
