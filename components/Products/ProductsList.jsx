@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { productList } from '@/app/api/products'
 import Link from 'next/dist/client/link'
+import AddToCartButton from './AddToCartButton'
 
 export default function ProductsList () {
   const [selectedPriceRange, setSelectedPriceRange] = useState('')
@@ -56,8 +57,8 @@ export default function ProductsList () {
         <div className='mr-16 mb-16 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
           {filteredProducts.map((product) => (
             <div key={product.id}>
-              <Link href={`/${product.id}`}>
-                <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
+              <div className='bg-white shadow-md rounded-md p-4 transform transition-transform duration-300 hover:-translate-y-2'>
+                <Link href={`/${product.id}`}>
                   <img
                     src={product.image}
                     alt={product.name}
@@ -66,8 +67,9 @@ export default function ProductsList () {
                   <h3 className='text-lg font-bold mb-2'>{product.name}</h3>
                   <p className='text-gray-600 mb-2'>{product.description}</p>
                   <p className='text-blue-500 font-semibold'>{product.price}</p>
-                </div>
-              </Link>
+                </Link>
+                <AddToCartButton product={product} />
+              </div>
             </div>
           ))}
         </div>
