@@ -35,7 +35,7 @@ export default function SidebarMenu ({ closeMenu, toggleMenu, isOpen }) {
           transition={{ duration: 0.3 }}
         >
           <motion.div
-            className='bg-white w-52 rounded-md'
+            className='bg-gray-300 w-52 rounded-md'
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
