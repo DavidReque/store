@@ -47,7 +47,7 @@ export default function SidebarMenu ({ closeMenu, toggleMenu, isOpen }) {
               whileTap={{ scale: 0.9 }}
             >
               <svg
-                className='h-6 w-6'
+                className='h-6 w-6 text-white'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
