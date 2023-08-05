@@ -11,7 +11,7 @@ const space = spaceGrotesk({
 
 export const metadata = {
   title: 'Online store',
-  description: 'Online store DSA'
+  description: 'Online store David'
 }
 
 export default function RootLayout ({ children }) {
